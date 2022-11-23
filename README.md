@@ -7,7 +7,8 @@ Arbitrary precision decimal arithmetic.
 ## Concept
 
 Decimal represents values internally using three integers: a sign, a coefficient, and an exponent.
-In this way, numbers of any size and with any number of decimal places can be represented exactly.
+[The Erlang VM allows integers of arbitrary size, limited only by system memory](https://www.erlang.org/doc/efficiency_guide/advanced.html).
+So with this approach, numbers of any size and with any number of decimal places can be represented exactly.
 
 ```elixir
 Decimal.new(_sign = 1, _coefficient = 42, _exponent = 0) #=> Decimal.new("42")
